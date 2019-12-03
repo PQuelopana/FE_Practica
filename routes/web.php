@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
+
+Route::resource('api/vouchertype', 'VoucherTypeController');
+Route::resource('api/establishment', 'EstablishmentController');
+Route::resource('api/operationtype', 'OperationTypeController');
+Route::resource('api/currency', 'CurrencyController');
+Route::resource('api/client', 'ClientController');
+Route::resource('api/warehouse', 'WarehouseController');
